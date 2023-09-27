@@ -35,9 +35,21 @@
               <td>
                 <%= render "favorites/favorite", book: @book %></td>
               </td>
+              <td>
+                <%= render "book_comments/comment_count", book: @book %>
+              </td>
             <% end %>
         </tr>
       </table>
+
+      <div id="comments_area">
+          <%= render 'book_comments/comments', book: @book %>
+        </div>
+
+      <div class="comment-form">
+        <%= render 'book_comments/form', book: @book %>
+      </div>
+
     </div>
   </div>
 </div>

@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "homes#top"
 
-  resources :users, only: [:index, :show, :edit, :update]
+  resources :users, only: [:index, :show, :edit, :update] do
+    member do
+      get :follows, :followers
+    end
+      resource :relationships, only: [:create, :destroy]
+  end
   
   resources :books, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
     resource :favorites, only: [:create, :destroy]

@@ -10,5 +10,10 @@
       <h2>Users</h2>
       <%= render 'index',users: @users %>
     </div>
+    
+    <div>
+        <td>フォロー<%= @user.followers.count %></td>
+        <td>フォロワー<%= @user.followeds.count %></td>
+    </div>
   </div>
 </div>

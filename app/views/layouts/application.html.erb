@@ -63,6 +63,9 @@
     <main>
       <p class="text-success"><%= flash[:notice] %></p>
       <p class="text-danger"><%= flash[:alert] %></p>
+      <div class="d-flex justify-content-center mb-2">
+        <%= render "searches/form" %>
+      </div>
       <%= yield %>
     </main>
   </body>

@@ -23,4 +23,4 @@ Things you may want to cover:
 
 * ...
 
-コミット用
+コミット用コメント
